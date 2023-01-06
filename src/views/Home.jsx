@@ -4,10 +4,17 @@ import Constants from 'expo-constants'
 import Card from '../components/Card.jsx'
 
 
-const Home = () => {
+const Home = ({navigation, route}) => {
     return (
         <View style={{marginTop: Constants.statusBarHeight, flexGrow: 1, backgroundColor: '#2C2C2C', flex: 1}}>
-            <Card />
+            
+            <Card 
+            navigation = {navigation}
+            route = {route}
+            />
+            
+            
+
         </View>
     )
 }

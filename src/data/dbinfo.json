@@ -1,75 +1,88 @@
 {
-    "data": [
-        {
-            "id": "1",
-            "name": "The Willows",
-            "address": "3517 W. Gray St. Utica",
-            "beds": "3",
-            "bathrooms": "2",
-            "size": "230 ft",
-            "price": "$440/m",
-            "imageURL": "https://res.cloudinary.com/g5-assets-cld/image/upload/x_0,y_0,h_598,w_897,c_crop/q_auto,f_auto,fl_lossy,g_center,h_667,w_1000/g5/g5-c-5befy22d4-morgan-properties/g5-cl-1hellpd464-hyde-park-apartment-homes/uploads/13_mk1yaa.jpg"
-        },
-        {
-            "id": "2",
-            "name": "The Suburbs",
-            "address": "2234 Wallaby St.",
-            "beds": "2",
-            "bathrooms": "1",
-            "size": "150 ft",
-            "price": "$220/m",
-            "imageURL": "https://rhotelgeelong.com.au/wp-content/uploads/2021/03/R-Hotel-Geelong-1-Bedroom-8-scaled.jpg"
-        },
-        {
-            "id": "3",
-            "name": "The Dramsky",
-            "address": "7642 Anderson St. Boulevard",
-            "beds": "4",
-            "bathrooms": "3",
-            "size": "650 ft",
-            "price": "$700/m",
-            "imageURL": "http://www.apartments.com/images/default-source/2019-naa/parkline-apartment-in-miami-fla2dc2731-e6f2-4dca-89c5-38245ccacea1.tmb-featuredim.jpg?sfvrsn=55bc41ed_1"
-        },
-        {
-            "id": "4",
-            "name": "Moonveil Room",
-            "address": "7364 Williams St.",
-            "beds": "2",
-            "bathrooms": "1",
-            "size": "100 ft",
-            "price": "$100/m",
-            "imageURL": "https://cdn.shortpixel.ai/spai/w_2688+q_lossless+ret_img+to_webp/https://helloavenir.com/wp-content/uploads/2020/06/DSC05610.jpg"
-        },
-        {
-            "id": "5",
-            "name": "The Andersons",
-            "address": "2222 Wilkins St. Peterson",
-            "beds": "8",
-            "bathrooms": "8",
-            "size": "800 ft",
-            "price": "$1000/m",
-            "imageURL": "https://pix10.agoda.net/hotelImages/298/2987813/2987813_17101807450057913663.jpg?ca=6&ce=1&s=1024x768"
-        },
-        {
-            "id": "6",
-            "name": "Margaret Wilker",
-            "address": "4235 Saint St. Matheus",
-            "beds": "2",
-            "bathrooms": "3",
-            "size": "340 ft",
-            "price": "$600/m",
-            "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgoI-h8cLXSPg9m-UhaFpbpmsIYqR5oMqQH15ZSXAlyqvAbrdJIYRucSYVjatN01xIhZA&usqp=CAU"
-        },
-        {
-            "id": "7",
-            "name": "The Acollyte",
-            "address": "8485 Monk St. Starlight",
-            "beds": "8",
-            "bathrooms": "4",
-            "size": "950 ft",
-            "price": "$1200/m",
-            "imageURL": "https://cdn.vox-cdn.com/thumbor/LJme-9qPPeF3SOqHh8z97mPoRbs=/0x0:1200x800/1200x800/filters:focal(504x304:696x496)/cdn.vox-cdn.com/uploads/chorus_image/image/58373545/286129160.0.jpg"
-        }
-
-    ]
+	"data": [
+		{
+			"id": "1",
+			"rating": "4.8",
+			"favorite": null,
+			"name": "The Willows",
+			"address": "3517 W. Gray St. Utica",
+			"beds": "3",
+			"bathrooms": "2",
+			"size": "230 ft",
+			"price": "$440/m",
+			"imageURL": "https://res.cloudinary.com/g5-assets-cld/image/upload/x_0,y_0,h_598,w_897,c_crop/q_auto,f_auto,fl_lossy,g_center,h_667,w_1000/g5/g5-c-5befy22d4-morgan-properties/g5-cl-1hellpd464-hyde-park-apartment-homes/uploads/13_mk1yaa.jpg"
+		},
+		{
+			"id": "2",
+			"rating": "4.9",
+			"favorite": null,
+			"name": "The Suburbs",
+			"address": "2234 Wallaby St.",
+			"beds": "2",
+			"bathrooms": "1",
+			"size": "150 ft",
+			"price": "$220/m",
+			"imageURL": "https://rhotelgeelong.com.au/wp-content/uploads/2021/03/R-Hotel-Geelong-1-Bedroom-8-scaled.jpg"
+		},
+		{
+			"id": "3",
+			"rating": "4.4",
+			"favorite": null,
+			"name": "The Dramsky",
+			"address": "7642 Boulevard St.",
+			"beds": "4",
+			"bathrooms": "3",
+			"size": "650 ft",
+			"price": "$700/m",
+			"imageURL": "http://www.apartments.com/images/default-source/2019-naa/parkline-apartment-in-miami-fla2dc2731-e6f2-4dca-89c5-38245ccacea1.tmb-featuredim.jpg?sfvrsn=55bc41ed_1"
+		},
+		{
+			"id": "4",
+			"rating": "4.3",
+			"favorite": null,
+			"name": "Moonveil Room",
+			"address": "7364 Williams St.",
+			"beds": "2",
+			"bathrooms": "1",
+			"size": "100 ft",
+			"price": "$100/m",
+			"imageURL": "https://cdn.shortpixel.ai/spai/w_2688+q_lossless+ret_img+to_webp/https://helloavenir.com/wp-content/uploads/2020/06/DSC05610.jpg"
+		},
+		{
+			"id": "5",
+			"name": "The Andersons",
+			"rating": "4.7",
+			"favorite": null,
+			"address": "342 Wilkins St. Peters",
+			"beds": "8",
+			"bathrooms": "8",
+			"size": "800 ft",
+			"price": "$1000/m",
+			"imageURL": "https://pix10.agoda.net/hotelImages/298/2987813/2987813_17101807450057913663.jpg?ca=6&ce=1&s=1024x768"
+		},
+		{
+			"id": "6",
+			"rating": "4.3",
+			"favorite": null,
+			"name": "Margaret Wilker",
+			"address": "4235 Saint St. Matheus",
+			"beds": "2",
+			"bathrooms": "3",
+			"size": "340 ft",
+			"price": "$600/m",
+			"imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgoI-h8cLXSPg9m-UhaFpbpmsIYqR5oMqQH15ZSXAlyqvAbrdJIYRucSYVjatN01xIhZA&usqp=CAU"
+		},
+		{
+			"id": "7",
+			"rating": "4.9",
+			"favorite": null,
+			"name": "The Acollyte",
+			"address": "8485 Monk St. Starlight",
+			"beds": "8",
+			"bathrooms": "4",
+			"size": "950 ft",
+			"price": "$1200/m",
+			"imageURL": "https://cdn.vox-cdn.com/thumbor/LJme-9qPPeF3SOqHh8z97mPoRbs=/0x0:1200x800/1200x800/filters:focal(504x304:696x496)/cdn.vox-cdn.com/uploads/chorus_image/image/58373545/286129160.0.jpg"
+		}
+	]
 }

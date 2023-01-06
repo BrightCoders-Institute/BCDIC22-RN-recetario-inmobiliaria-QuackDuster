@@ -1,21 +1,43 @@
 import React from 'react'
 import { StatusBar } from "expo-status-bar"
-import { View, Text, FlatList, Image, TouchableHighlight, SectionList, SafeAreaView, StyleSheet, TouchableOpacity} from 'react-native'
+import { View, Text, FlatList, Image, TouchableHighlight, SectionList, SafeAreaView, StyleSheet, TouchableOpacity, ImageBackground} from 'react-native'
 import dbinfo from '../data/dbinfo.json'
-import { FontAwesome }  from "@expo/vector-icons"
-import { MaterialIcons } from '@expo/vector-icons'
-import { Entypo } from '@expo/vector-icons'
-import { Ionicons } from '@expo/vector-icons'
-import { FontAwesome5 } from '@expo/vector-icons'
+import 
+{ MaterialIcons,  
+    FontAwesome, 
+    Entypo, 
+    Ionicons, 
+    FontAwesome5  } from '@expo/vector-icons'
 
-const Card = () => {
+const Card = ({navigation, route}) => {
     return (
         <FlatList
-            data={dbinfo.data}
+            data={route.params.data.properties.data}
             renderItem={({ item }) => (
                 <View style={styles.container}>
                     <View style={styles.row}>
-                        <Image style={styles.photo} source={{uri: item.imageURL}}/>
+                        <ImageBackground
+                        style={styles.photo} source={{uri: item.imageURL}} imageStyle={{ borderRadius: 12 }}
+                        >
+                            <TouchableOpacity onPress = { () => 
+                                navigation.navigate('AptDetails', item)
+                            }>
+                            
+                            
+                            <View style={styles.favsCont}>
+                            
+                                <MaterialIcons
+                                    name='star'
+                                    size={14}
+                                    color='#EEBA00'
+                                    style={{ textAlign: 'center'}}
+                                />
+                                    <Text style={{ color: '#7A6229', fontSize: 12, fontWeight: 'bold' }}>
+                                        {item.rating}
+                                    </Text>
+                            </View>    
+                            </TouchableOpacity>
+                        </ImageBackground>
                         <View style={styles.infoBlock}>
                             <Text style={styles.panelTitle}>{item.name}</Text>
                             <Text style={styles.panelAddress}>
@@ -71,13 +93,12 @@ const styles = StyleSheet.create({
         justifyContent: "space-between"
     },
     photo: {
-        width: 120,
-        height: 120,
+        width: 110,
+        height: 110,
         borderRadius: 10,
         margin: 5,
-        justifyContent: "center",
-        marginLeft:0
-        
+        justifyContent: 'center',
+        marginLeft:0,
     },
     infoBlock: {
         marginLeft: 10,
@@ -117,13 +138,26 @@ const styles = StyleSheet.create({
         fontSize: 22,
     },
     likeButton: {
-        backgroundColor: "#23D689",
+        backgroundColor: "#00B074",
         alignSelf: 'flex-end',
         alignItems: 'center',
         justifyContent: 'center',
         width: 30,
         height: 30,
         borderRadius: 100,
+    },
+    favsCont: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        margin: 35,
+        marginBottom: 4,
+        marginTop: 73,
+        padding: 4,
+        paddingHorizontal: 6,
+        backgroundColor: '#FBEDB7',
+        borderRadius: 10,
+        alignSelf: 'flex-start',
+        
     }
 })
 

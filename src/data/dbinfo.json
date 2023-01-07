@@ -3,7 +3,7 @@
 		{
 			"id": "1",
 			"rating": "4.8",
-			"favorite": null,
+			"favorite": false,
 			"name": "The Willows",
 			"address": "3517 W. Gray St. Utica",
 			"beds": "3",
@@ -15,7 +15,7 @@
 		{
 			"id": "2",
 			"rating": "4.9",
-			"favorite": null,
+			"favorite": false,
 			"name": "The Suburbs",
 			"address": "2234 Wallaby St.",
 			"beds": "2",
@@ -27,7 +27,7 @@
 		{
 			"id": "3",
 			"rating": "4.4",
-			"favorite": null,
+			"favorite": false,
 			"name": "The Dramsky",
 			"address": "7642 Boulevard St.",
 			"beds": "4",
@@ -39,7 +39,7 @@
 		{
 			"id": "4",
 			"rating": "4.3",
-			"favorite": null,
+			"favorite": false,
 			"name": "Moonveil Room",
 			"address": "7364 Williams St.",
 			"beds": "2",
@@ -52,7 +52,7 @@
 			"id": "5",
 			"name": "The Andersons",
 			"rating": "4.7",
-			"favorite": null,
+			"favorite": false,
 			"address": "342 Wilkins St. Peters",
 			"beds": "8",
 			"bathrooms": "8",
@@ -63,7 +63,7 @@
 		{
 			"id": "6",
 			"rating": "4.3",
-			"favorite": null,
+			"favorite": false,
 			"name": "Margaret Wilker",
 			"address": "4235 Saint St. Matheus",
 			"beds": "2",
@@ -75,7 +75,7 @@
 		{
 			"id": "7",
 			"rating": "4.9",
-			"favorite": null,
+			"favorite": false,
 			"name": "The Acollyte",
 			"address": "8485 Monk St. Starlight",
 			"beds": "8",

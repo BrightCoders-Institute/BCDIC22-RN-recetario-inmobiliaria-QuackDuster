@@ -1,16 +1,14 @@
+// Modules
 import React from 'react';
-import { Text, View, TouchableOpacity, Image, StyleSheet, Animated } from 'react-native';
-import Constants from 'expo-constants';
-import { FontAwesome, Feather, MaterialIcons } from '@expo/vector-icons';
+import { Text, View, Image, StyleSheet, Animated } from 'react-native';
+import { FontAwesome, Feather, AntDesign, Ionicons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const SPACING = 15;
 
 const AptDetails = ({ route, navigation }) => {
 	const safeInsets = useSafeAreaInsets();
-	const { name, address, imageURL, beds, bathrooms, size, price } = route.params;
-	console.log(name, address);
-
+	// const { name, address, imageURL, beds, bathrooms, size, price, favorite } = route.params;
 	return (
 		<View style={styles.container}>
 			<Animated.View
@@ -24,18 +22,21 @@ const AptDetails = ({ route, navigation }) => {
 					justifyContent: 'flex-start',
 				}}
 			>
-				<FontAwesome name='close' style={{ color: '#FFFFFF', fontSize: 30 }} onPress={() => navigation.goBack()} />
-				<Feather name='share' style={{ color: '#FFFFFF', fontSize: 30, marginLeft: 260, marginRight: 15 }} />
-				<MaterialIcons
-					name={'favorite'}
+				<FontAwesome
+					name='close'
+					style={{ color: '#FFFFFF', fontSize: 30 }}
+					onPress={() => navigation.goBack()}
+				/>
+				<Feather
+					name='share'
+					style={{ color: '#FFFFFF', fontSize: 30, marginLeft: 260, marginRight: 15 }}
+				/>
+				<AntDesign
+					name={route.params.favorite ? 'heart' : 'hearto'}
 					style={{ color: '#FFFFFF', fontSize: 30, marginRight: 2 }}
-					// onPress={() => {
-					//     setFavs(!favs)
-					//     // favorite = favs
-					//     }}
 				/>
 			</Animated.View>
-			<Image source={{ uri: imageURL }} style={styles.postImage} />
+			<Image source={{ uri: route.params.imageURL }} style={styles.postImage} />
 
 			<Animated.View
 				style={{
@@ -47,16 +48,26 @@ const AptDetails = ({ route, navigation }) => {
 					alignItems: 'flex-start',
 				}}
 			>
-				<Text style={styles.postTitle}>{name}</Text>
-				<Text style={styles.postSize}>{address}</Text>
+				<Text style={styles.postTitle}>{route.params.name}</Text>
+
+				<Text style={styles.postLocation}>
+					<Ionicons style={styles.iconLocation} name='ios-location-sharp' /> {route.params.address}
+				</Text>
 			</Animated.View>
 
 			<View style={styles.postDetails}>
-				<Text style={styles.postSize}>Total of beds: {beds}</Text>
-				<Text style={styles.postSize}>Total of bathrooms: {bathrooms}</Text>
-				<Text style={styles.postSize}>Size of the apartment: {size}</Text>
-				<Text style={styles.postSize}>Price of the rent: {price}</Text>
+				<Text style={{ alignSelf: 'center', color: 'white', fontSize: 24, fontWeight: 'bold' }}>
+					Details of the apartment
+				</Text>
 				<Text></Text>
+				<Text style={styles.postSize}>Total of beds</Text>
+				<Text style={styles.postData}>{route.params.beds}</Text>
+				<Text style={styles.postSize}>Total of bathrooms</Text>
+				<Text style={styles.postData}>{route.params.bathrooms}</Text>
+				<Text style={styles.postSize}>Size of the apartment</Text>
+				<Text style={styles.postData}>{route.params.size}</Text>
+				<Text style={styles.postSize}>Price of the rent</Text>
+				<Text style={styles.postData}>{route.params.price}</Text>
 			</View>
 
 			<View>
@@ -88,12 +99,32 @@ const styles = StyleSheet.create({
 		color: '#FFFFFF',
 	},
 	postSize: {
-		fontSize: 20,
+		fontSize: 15,
 		fontWeight: 'semi-bold',
+		textAlign: 'center',
+		paddingTop: 10,
+		color: '#FFFFFF',
+	},
+	postData: {
+		fontSize: 20,
+		fontWeight: 'bold',
+		textAlign: 'center',
 		color: '#FFFFFF',
 	},
 	postIngredients: {
 		textAlign: 'left',
+		color: '#FFFFFF',
+	},
+	iconLocation: {
+		fontSize: 18,
+		color: 'white',
+		letterSpacing: 2,
+	},
+	postLocation: {
+		fontSize: 15,
+		fontWeight: '300',
+		textAlign: 'center',
+		paddingTop: 10,
 		color: '#FFFFFF',
 	},
 });

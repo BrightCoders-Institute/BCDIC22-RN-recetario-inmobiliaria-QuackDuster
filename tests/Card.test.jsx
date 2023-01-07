@@ -31,6 +31,7 @@ describe('Card component', () => {
 		const favButton = component4.root.findByProps({ testID: 'favsBtn' });
 
 		expect(component4.root.props.item.favorite).toBe(false);
+		global.setImmediate = jest.useRealTimers;
 		act(() => favButton.props.onPress());
 		expect(component4.root.props.item.favorite).toBe(true);
 	});

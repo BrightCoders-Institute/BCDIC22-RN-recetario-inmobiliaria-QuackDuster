@@ -45,14 +45,11 @@ const Card = ({ item }) => {
 					testID='favsBtn'
 					onPress={() => {
 						item.favorite = !item.favorite;
+						setFavorite(item.favorite);
 					}}
 				>
 					<FontAwesome
 						name='heart'
-						onPress={() => {
-							item.favorite = !item.favorite;
-							setFavorite(!item.favorite);
-						}}
 						style={{ color: `${item.favorite ? 'red' : 'white'}`, fontSize: 17, borderRadius: 20 }}
 					/>
 				</TouchableOpacity>
